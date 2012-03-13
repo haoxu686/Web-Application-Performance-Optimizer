@@ -1,0 +1,12 @@
+This is a tool to help tune a simple J2EE project. The idea is to log the 
+execution time of each function by logging the entrance timestamp and exit 
+timestamp. This is done by injecting code into .class and .jsp files. Also 
+minor modifications to configuration files such as .xml files are included.
+
+Database schema:
+Table: Request (Long requestid primary key auto-increment, String resource, String state)
+Table: Log(Long id primary key auto-increment, Long requestid references Request, String method, String operation)
+
+This is a NetBeans project developed on windows platform. To run please 
+build through NetBeans and copy "compilelib", "copyclasses", "copylib" and "workflow_2_8.dtd" 
+into dist dirctory where the exported jar is located.
